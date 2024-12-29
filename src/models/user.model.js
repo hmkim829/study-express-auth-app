@@ -9,9 +9,10 @@ const userSchema = mongoose.Schema({
         type: String,
         minlength: 5
     },
-    gooleId: {
+    googleId: {
         type: String,
-        unique: true
+        unique: true,
+        sparse: true
     }
 })
 
