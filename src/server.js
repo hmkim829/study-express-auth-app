@@ -19,6 +19,14 @@ mongoose.connect(`mongodb://root:1234@localhost:27017`)
         console.error(err);
     })
 
+app.get('/login', (req, res) => {
+    res.render('login');
+})
+
+app.get('/signup', (req, res) => {
+    res.render('signup');
+})
+
 const port = 4000;
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
